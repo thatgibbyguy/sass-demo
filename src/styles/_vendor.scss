@@ -1,0 +1,28 @@
+// Place all vendor sass and imports in this files
+
+@import '~plygrid/src/scss/_ply.scss';
+
+// Vendor Overrides Happen Here
+
+.units-container {
+  max-width: 100%;
+}
+
+.navbar {
+  li {
+    &:first-child {
+      a {
+        padding-left: 0;
+      }
+    }
+  }
+}
+
+// button.btn,
+// .btn {
+//   @include transition(all ease-in-out 1s);
+//
+//   // &:hover {
+//   //   @include rotate(180deg);
+//   // }
+// }
