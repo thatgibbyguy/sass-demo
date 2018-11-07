@@ -1,0 +1,40 @@
+<section class="ox-card">
+  <header class="ox-card__header">
+    <!-- if no buttons, just show the header -->
+    <h3 class="ox-card__title"
+        *ngIf="!cardDemo.header.buttons">{{cardDemo.header.title}}</h3>
+
+    <!-- if we have buttons, create a row for the header -->
+    <div class="units-row"
+         *ngIf="cardDemo.header.buttons">
+      <div class="unit-auto">
+        <h3 class="ox-card__title">
+          {{cardDemo.header.title}}
+        </h3>
+      </div>
+      <div class="ox-card__header-button-group">
+        <span class="ox-card__header-button">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+        </span>
+        <span class="ox-card__header-button">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Content Is Required -->
+  <div class="ox-card__content">
+    <h4>Description</h4>
+    <p>Curabitur sit amet ultricies tortor. Nam ex quam, suscipit ut risus ac, porta iaculis metus. In a tempus sem, non mattis ipsum. Nullam sit amet sem mi. Vestibulum molestie ac eros et luctus. Nam tristique lacus eu ex auctor, ac hendrerit lectus accumsan. Vestibulum cursus hendrerit mi, ac tristique purus tristique eget. Integer molestie ultricies tortor id bibendum. Maecenas nec quam quis orci malesuada dignissim vel a lorem. Sed sit amet diam a turpis tempus rhoncus.</p>
+  </div>
+
+  <!-- If we have labels, show them -->
+  <div class="ox-card__label-container"
+       *ngIf="cardDemo.labels">
+    <div class="label"
+         *ngFor="let label of cardDemo.labels">
+      {{label.title}}
+    </div>
+  </div>
+</section>

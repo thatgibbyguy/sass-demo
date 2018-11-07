@@ -1,0 +1,101 @@
+.ox-card {
+  @include box-shadow(0, 0, $shadow-depth, $shadow-color)
+
+  border-radius: $border-radius;
+  background: $color-white;
+  border: 1px solid $border-color;
+
+  .ox-card__header,
+  .ox-card__content,
+  .ox-card__footer,
+  .ox-card__label-container {
+    padding: $padding;
+  }
+
+  // header content
+
+  .ox-card__header {
+    border-bottom: 1px solid $border-color;
+  }
+
+  .ox-card__title {
+    @extend %uppercase;
+
+    font-size: $font-size-h4-sm;
+    margin-bottom: 0;
+    padding: $padding/2 0;
+  }
+
+  .ox-card__header-button-group {
+    display: flex;
+    align-items: center;
+    padding-right: $padding / 2;
+
+    .ox-card__header-button {
+      @extend %cursor-pointer;
+      @include square(2em);
+      @include transition();
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      svg {
+        @include square(20px);
+
+        stroke-width: .125em;
+        color: currentColor;
+      }
+
+      &:hover {
+        color: $color-red;
+      }
+    }
+  }
+
+  // body content
+
+  .ox-card__content {
+    @include transition(opacity ease-out .5s);
+
+    height: 0px;
+    max-height: 1px;
+    overflow: hidden;
+    opacity: 0;
+    padding: 0;
+
+    p {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .ox-card__label-container {
+    .label {
+      &:not(:last-child) {
+        margin-right: 1em;
+      }
+    }
+  }
+
+
+  // footer content
+
+  .ox-card__footer {
+    border-top: 1px solid $border-color;
+  }
+
+  &:hover {
+    .ox-card__content {
+      height: auto;
+      max-height: 500px;
+      opacity: 1;
+      padding: $padding;
+    }
+
+    .ox-card__label-container {
+      border-top: 1px solid $border-color;
+    }
+  }
+}

@@ -1,5 +1,5 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<header>
+<header class="global-header">
   <div class="units-container">
     <div class="units-row">
       <div class="unit-auto">
@@ -26,13 +26,25 @@
   </div>
 </header>
 <main class="units-container">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
+  <article>
+    <div class="units-row split">
+      <div class="unit-100">
+        <h1>
+          Welcome to {{ title }}!
+        </h1>
 
-  <p>Above are some helpful links</p>
+        <p>Above are some helpful links</p>
 
-  <button type="button" name="button" class="btn btn-blue">This is a button</button>
+        <button type="button" name="button" class="btn btn-blue">This is a button</button>
+      </div>
+    </div>
+    <hr>
+    <div class="units-row">
+      <div class="unit-33">
+        <card-demo></card-demo>
+      </div>
+    </div>
+  </article>
 </main>
 
 <router-outlet></router-outlet>
