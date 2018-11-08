@@ -4,11 +4,13 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CardDemoComponent } from './card-demo/card-demo.component';
+import { OxButtonComponent } from './ox-button/ox-button.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CardDemoComponent
+    CardDemoComponent,
+    OxButtonComponent
   ],
   imports: [
     BrowserModule,
