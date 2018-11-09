@@ -1,16 +1,16 @@
 
 <a href="#"
-   class="{{oxButton.buttonClass}}"
-   *ngIf="oxButton.type === 'a'">{{oxButton.text}}</a>
+   class="{{buttonClass}}"
+   *ngIf="type === 'a'">{{text}}</a>
 
 <input type="button"
-       class="{{oxButton.buttonClass}}"
-       *ngIf="oxButton.type === 'input'"
-       value="{{oxButton.text}}">
+       class="{{buttonClass}}"
+       *ngIf="type === 'input'"
+       value="{{text}}">
 
 <button type="button"
-       class="{{oxButton.buttonClass}}"
-       *ngIf="oxButton.type === 'button'">{{oxButton.text}}</button>
+       class="{{buttonClass}}"
+       *ngIf="type === 'button'">{{text}}</button>
 
- <span class="{{oxButton.buttonClass}}"
-       *ngIf="oxButton.type === 'span'">{{oxButton.text}}</span>
+ <span class="{{buttonClass}}"
+       *ngIf="type === 'span'">{{text}}</span>
