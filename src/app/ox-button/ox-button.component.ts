@@ -12,9 +12,10 @@ export class OxButtonComponent implements OnInit {
   @Input() size: 'small' | 'big' | 'smaller' | 'default';
   @Input() color: 'blue' | 'yellow' | 'red' | 'green' | 'black' | 'white';
   @Input() isOutlined: boolean;
+  buttonClass: string = 'btn';
 
   constructor() {
-    this.buttonClass = 'btn';
+    // this.buttonClass = 'btn';
   }
 
   ngOnInit() {
@@ -27,7 +28,7 @@ export class OxButtonComponent implements OnInit {
       this.type = 'span';
     }
 
-    if (!(size === 'default' || size === '' || size === null)) {
+    if (!(size === 'default')) {
       this.buttonClass = `${this.buttonClass} btn-${size}`;
     }
 
@@ -35,7 +36,7 @@ export class OxButtonComponent implements OnInit {
       this.buttonClass = `${this.buttonClass} btn-${color}`;
     }
 
-    if (isOutlined && (isOutlined === 'true' || isOutlined === true)) {
+    if (isOutlined) {
       this.buttonClass = `${this.buttonClass} btn-outline`;
     }
   }

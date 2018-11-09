@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'card-demo',
@@ -7,25 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class CardDemoComponent implements OnInit {
-
-  cardDemo: CardDemo = {
-    id: 1,
-    header: {
-      title: 'Card Title',
-      buttons: [{minus: 'blah'}, {favorite: 'blah'}]
-    },
-    labels: [{title: 'Label 1'}, {title: 'Label 2'}, {title: 'Label 3'}],
-  }
-
-  constructor() { }
+  @Input () id: number;
+  @Input () header: object;
+  @Input () labels: Array<object>;
 
   ngOnInit() {
   }
 
-}
-
-class CardDemo {
-  id: number;
-  header: object;
-  labels: Array<object>;
 }

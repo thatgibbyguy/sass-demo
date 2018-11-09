@@ -42,8 +42,12 @@
     </div>
     <hr>
     <div class="units-row">
-      <div class="unit-33">
-        <card-demo></card-demo>
+      <div class="unit-33"
+           *ngFor="let card of cards">
+        <card-demo [id]=card.id
+                   [header]=card.header
+                   [labels]=card.labels
+        ></card-demo>
       </div>
     </div>
   </article>

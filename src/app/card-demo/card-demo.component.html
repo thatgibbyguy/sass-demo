@@ -1,15 +1,15 @@
-<section class="ox-card">
+<section class="ox-card" id={{id}}>
   <header class="ox-card__header">
     <!-- if no buttons, just show the header -->
     <h3 class="ox-card__title"
-        *ngIf="!cardDemo.header.buttons">{{cardDemo.header.title}}</h3>
+        *ngIf="!header.buttons">{{header.title}}</h3>
 
     <!-- if we have buttons, create a row for the header -->
     <div class="units-row"
-         *ngIf="cardDemo.header.buttons">
+         *ngIf="header.buttons">
       <div class="unit-auto">
         <h3 class="ox-card__title">
-          {{cardDemo.header.title}}
+          {{header.title}}
         </h3>
       </div>
       <div class="ox-card__header-button-group">
@@ -31,9 +31,9 @@
 
   <!-- If we have labels, show them -->
   <div class="ox-card__label-container"
-       *ngIf="cardDemo.labels">
+       *ngIf="labels">
     <div class="label"
-         *ngFor="let label of cardDemo.labels">
+         *ngFor="let label of labels">
       {{label.title}}
     </div>
   </div>
