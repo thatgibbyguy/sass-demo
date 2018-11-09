@@ -18,9 +18,14 @@ export class OxButtonComponent implements OnInit {
   }
 
   ngOnInit() {
-    const { size,
+    const { type,
+            size,
             color,
             isOutlined } = this;
+
+    if (!type) {
+      this.type = 'span';
+    }
 
     if (!(size === 'default' || size === '' || size === null)) {
       this.buttonClass = `${this.buttonClass} btn-${size}`;
