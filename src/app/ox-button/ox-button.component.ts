@@ -18,19 +18,18 @@ export class OxButtonComponent implements OnInit {
 
   constructor() {
     const { size,
-            buttonClass,
             color,
             isOutlined } = this.oxButton;
     if (!(size === 'default')) {
-      this.oxButton.buttonClass = `${buttonClass} btn-${size}`;
+      this.oxButton.buttonClass = `${this.oxButton.buttonClass} btn-${size}`;
     }
 
     if (color) {
-      this.oxButton.buttonClass = `${buttonClass} btn-${color}`;
+      this.oxButton.buttonClass = `${this.oxButton.buttonClass} btn-${color}`;
     }
 
     if (isOutlined) {
-      this.oxButton.buttonClass = `${buttonClass} btn-outline`;
+      this.oxButton.buttonClass = `${this.oxButton.buttonClass} btn-outline`;
     }
   }
 
